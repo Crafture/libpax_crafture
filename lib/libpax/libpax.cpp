@@ -86,6 +86,7 @@ void resetMacAddresses() {
 void resetBleCounter() {
   std::cout << "BLE COUNTER before reset " << counted_ble << std::endl;
   counted_ble = 0;
+  macAddressIds.clear();
   std::cout << "BLE COUNTER after reset " << counted_ble << std::endl;
 }
 
