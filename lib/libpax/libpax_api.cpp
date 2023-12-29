@@ -29,7 +29,7 @@ limitations under the License.
 #include <iostream>
 #include "freertos/task.h"    // needed for tasks
 #include "freertos/timers.h"  // TimerHandle_t
-#include "../../../../include/crontab.h"
+#include "crontab.h"
 
 
 #define SECOND 1000// 1 second 
@@ -112,10 +112,10 @@ void libpax_default_config(struct libpax_config_t* configuration) {
   configuration->blescanwindow = 80;
 }
 
-Ticker periodicReset;
+Ticker periodicResetMacAddr;
 void resetMacAddressesWrapper() {
   std::cout << "IN RESETMAC WRAPPER" << std::endl;
-  periodicReset.attach_ms(RESET_BLE_SET_INTERVAL, resetMacAddresses);
+  periodicResetMacAddr.attach_ms(RESET_BLE_SET_INTERVAL, resetMacAddresses);
   std::cout << "MAC ID's ticket initialized, reset every " << RESET_BLE_SET_INTERVAL << " ms" << std::endl;
 }
 
@@ -130,9 +130,9 @@ void  checkandResetBleCounter() {
   std::cout << "checkandResetBleCounter: Condition false" << std::endl;
 }
 
-Ticker periodicReset;
+Ticker periodicResetBleCounter;
 void resetBLECounterRoutine(){
-    periodicReset.attach_ms(MINUTE, resetBLECounterAtM)
+    periodicResetCounter.attach_ms(MINUTE, resetBLECounterAtM)
 }
 
 void libpax_get_current_config(struct libpax_config_t* configuration) {
