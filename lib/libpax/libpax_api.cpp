@@ -132,7 +132,7 @@ void  checkandResetBleCounter() {
 
 Ticker periodicResetBleCounter;
 void resetBLECounterRoutine(){
-    periodicResetCounter.attach_ms(MINUTE, resetBLECounterAtM)
+    periodicResetCounter.attach_ms(MINUTE, checkandResetBleCounter)
 }
 
 void libpax_get_current_config(struct libpax_config_t* configuration) {
