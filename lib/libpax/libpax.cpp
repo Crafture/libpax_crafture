@@ -83,6 +83,12 @@ void resetMacAddresses() {
   std::cout << "MAC ID's size == " << macAddressIds.size() << std::endl;
 }
 
+void resetBleCounter() {
+  std::cout << "BLE COUNTER before reset " << counted_ble << std::endl;
+  counted_ble = 0;
+  std::cout << "BLE COUNTER after reset " << counted_ble << std::endl;
+}
+
 int libpax_wifi_counter_count() { return macs_wifi; }
 
 int libpax_ble_counter_count() { return macs_ble; }

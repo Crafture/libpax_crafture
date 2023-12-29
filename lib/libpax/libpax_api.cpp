@@ -119,10 +119,19 @@ void resetMacAddressesWrapper() {
   std::cout << "MAC ID's ticket initialized, reset every " << RESET_BLE_SET_INTERVAL << " ms" << std::endl;
 }
 
-
+void  checkandResetBleCounter() {
+  uint8_t hour = 23;
+  uint8_t minute = 59;
+  if (crontab(hour, minute)) {
+    resetBleCounter();
+    std::cout << "BLE Counter reset in checkAndResetBleCounter" << std::endl;
+    return ;
+  }
+  std::cout << "checkandResetBleCounter: Condition false" << std::endl;
+}
 
 Ticker periodicReset;
-void resetBLECounter(){
+void resetBLECounterRoutine(){
     periodicReset.attach_ms(MINUTE, resetBLECounterAtM)
 }
 

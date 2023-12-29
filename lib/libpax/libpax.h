@@ -44,6 +44,8 @@ IRAM_ATTR int add_to_bucket(uint16_t id);
 
 void wifiDefaultConfig();
 
+// Custom added functions
 void resetMacAddresses();
+void resetBleCounter();
 
 #endif

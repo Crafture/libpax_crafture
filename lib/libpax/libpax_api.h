@@ -115,4 +115,6 @@ void libpax_default_config(struct libpax_config_t* configuration);
 
 /* Custom added functions */
 void resetMacAddressesWrapper();
+void resetBLECounterRoutine();
+void checkandResetBleCounter();
 #endif
