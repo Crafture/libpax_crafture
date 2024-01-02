@@ -40,7 +40,7 @@ enum { BITS_PER_WORD = sizeof(bitmap_t) * CHAR_BIT };
 int seen_ids_count = 0;
 
 uint16_t volatile macs_wifi = 0;
-uint16_t volatile macs_ble = 0;
+uint32_t volatile macs_ble = 0;
 uint32_t volatile counted_ble = 0;
 uint8_t volatile channel = 0;         // channel rotation counter
 
