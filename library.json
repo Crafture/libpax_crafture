@@ -1,18 +1,18 @@
 {
     "name": "libpax",
-    "version":"1.1.0",
+    "version":"0.1.0",
     "keywords": "libpax",
     "description": "Library for PAX counting using BLE and WiFi",
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/dbSuS/libpax"
+      "url": "https://github.com/Crafture/libpax_crafture"
     },
     "authors":
     [
       {
-        "name":"Grey Rook GmbH",
-        "email":"info@greyrook.com"
+        "name":"Crafture",
+        "email":"engineers@crafture.com"
       }
     ],
     "frameworks": ["espidf", "arduino"],
@@ -21,4 +21,4 @@
       "includeDir": "lib/libpax",
       "srcDir": "lib/libpax"
     }
-  }
+}
